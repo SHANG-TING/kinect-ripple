@@ -34,6 +34,7 @@
     <Content Include="Includes\Includes.wxi">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <WixExtension Include="WixNetFxExtension">
@@ -41,6 +42,11 @@
       <Name>WixNetFxExtension</Name>
     </WixExtension>
   </ItemGroup>
+  <PropertyGroup>
+    <WixToolPath>$(SolutionDir)packages\WiX.Toolset.3.9.1208.0\tools\wix\</WixToolPath>
+    <WixTargetsPath>$(WixToolPath)wix.targets</WixTargetsPath>
+    <WixTasksPath>$(WixToolPath)WixTasks.dll</WixTasksPath>
+  </PropertyGroup>
   <Import Project="$(WixTargetsPath)" />
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.

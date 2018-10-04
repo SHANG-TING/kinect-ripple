@@ -157,7 +157,7 @@ namespace RippleEditor.Controls
                 //Content
                 tile.Content = this.TBContentValue.Text;
                 //Color
-                tile.Color = this.clrPicker.SelectedColor;
+                tile.Color = this.clrPicker.SelectedColor.Value;
                 //Action Type
                 tile.Action = (TileAction)this.CBActionValue.SelectedIndex;
                 //Action Content
